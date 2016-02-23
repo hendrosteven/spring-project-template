@@ -47,11 +47,11 @@ public class ProductControllerTests {
         Product responseObj = restTemplate.postForObject(BASE_URL, p, Product.class);
         Assert.assertNotNull(responseObj.getId());
 
-//        //nama tidak diisi
-//        Product px = new Product();
-//        p.setCode("PT-002");
-//        Product responseObjx = restTemplate.postForObject(BASE_URL, px, Product.class);
-//        Assert.assertNotNull(responseObjx.getId());
+        //nama tidak diisi
+        Product px = new Product();
+        p.setCode("PT-002");
+        Product responseObjx = restTemplate.postForObject(BASE_URL, px, Product.class);
+        Assert.assertNotNull(responseObjx.getId());
 
     }
 
