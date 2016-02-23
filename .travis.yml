@@ -9,3 +9,6 @@ services:
 before_install:     
     - mysql -uroot -e "drop database if exists dbtemplate"
     - mysql -uroot -e "create database dbtemplate"
+
+after_success:
+    - mvn jacoco:report coveralls:report
