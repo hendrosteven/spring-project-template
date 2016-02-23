@@ -58,6 +58,7 @@ public class ProductControllerTests {
     @Test
     public void testDelete() {        
         HttpHeaders headers = new HttpHeaders();
+        
         headers.setContentType(MediaType.APPLICATION_JSON);      
         HttpEntity<Object> entity = new HttpEntity<>(headers);
         ResponseEntity<String> responseEntity = restTemplate.exchange(BASE_URL + "abc123", HttpMethod.DELETE, entity, String.class);
