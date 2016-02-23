@@ -7,6 +7,6 @@ services:
     - mysql
 
 before_install: 
-    - mysql -uroot -e "grant all on admin.* to admin@localhost identified by 'java'"
+    - mysql -uroot -e "grant all on dbtemplate.* to admin@localhost identified by 'admin'"
     - mysql -uroot -e "drop database if exists dbtemplate"
     - mysql -uroot -e "create database dbtemplate"
