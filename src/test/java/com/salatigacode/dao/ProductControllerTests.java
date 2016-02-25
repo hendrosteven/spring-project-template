@@ -31,7 +31,7 @@ import org.springframework.web.client.RestTemplate;
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = SpringTemplateApplication.class)
 @Sql(scripts = {"/mysql/delete-data.sql", "/mysql/sample-product.sql"})
-@WebIntegrationTest(randomPort = true)
+@WebIntegrationTest
 public class ProductControllerTests {
 
     private static final String BASE_URL = "http://localhost:8080/api/product/";
