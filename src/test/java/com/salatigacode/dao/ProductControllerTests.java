@@ -51,7 +51,7 @@ public class ProductControllerTests {
         Product px = new Product();
         p.setCode("PT-002");
         Product responseObjx = restTemplate.postForObject(BASE_URL, px, Product.class);
-        Assert.assertNotNull(responseObjx.getId());
+        Assert.assertNull(responseObjx.getId());
 
     }
 
