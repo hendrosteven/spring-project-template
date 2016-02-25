@@ -31,7 +31,7 @@ import org.springframework.web.client.RestTemplate;
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = SpringTemplateApplication.class)
 @Sql(scripts = {"/mysql/delete-data.sql", "/mysql/sample-product.sql"})
-@WebIntegrationTest
+@WebIntegrationTest(randomPort = true)
 public class ProductControllerTests {
 
     private static final String BASE_URL = "http://localhost:8080/api/product/";
@@ -56,10 +56,10 @@ public class ProductControllerTests {
     }
 
     @Test
-    public void testDelete() {        
+    public void testDelete() {
         HttpHeaders headers = new HttpHeaders();
-        
-        headers.setContentType(MediaType.APPLICATION_JSON);      
+
+        headers.setContentType(MediaType.APPLICATION_JSON);
         HttpEntity<Object> entity = new HttpEntity<>(headers);
         ResponseEntity<String> responseEntity = restTemplate.exchange(BASE_URL + "abc123", HttpMethod.DELETE, entity, String.class);
         Assert.assertEquals(HttpStatus.OK, responseEntity.getStatusCode().OK);
