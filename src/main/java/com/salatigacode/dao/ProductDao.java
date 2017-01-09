@@ -13,5 +13,5 @@ import org.springframework.data.repository.PagingAndSortingRepository;
  * @author hendro.tampake
  */
 public interface ProductDao extends PagingAndSortingRepository<Product, String> {
-
+  //empty
 }
