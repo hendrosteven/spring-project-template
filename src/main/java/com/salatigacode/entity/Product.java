@@ -19,7 +19,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 /**
  *
- * @author hendro.tampake
+ * @author hendro steven tampake
  */
 
 @Entity
